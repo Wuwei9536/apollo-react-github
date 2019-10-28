@@ -1,7 +1,7 @@
 import React from 'react';
 import ApolloClient, { InMemoryCache } from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
-import Navigate from './pages/navigate';
+import Account from './pages/account';
 
 const ApolloCache = new InMemoryCache();
 ApolloCache.writeData({ data: { cardDatas: [] } });
@@ -13,7 +13,7 @@ const client = new ApolloClient({
 
 const App: React.FC = () => (
   <ApolloProvider client={client}>
-    <Navigate />
+    <Account />
   </ApolloProvider>
 );
 
